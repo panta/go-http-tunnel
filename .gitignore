@@ -25,3 +25,7 @@ tags
 
 # vendored modules
 /vendor/
+
+# binaries
+/tunnel
+/tunneld
