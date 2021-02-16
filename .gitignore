@@ -29,3 +29,10 @@ tags
 # binaries
 /tunnel
 /tunneld
+
+# certs / keys
+*.pem
+*.crt
+*.key
+*.csr
+/certs/

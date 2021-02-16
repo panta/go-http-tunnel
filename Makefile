@@ -98,3 +98,7 @@ package:
 .PHONY: publish
 publish:
 	ghr -recreate -u panta -t ${GITHUB_TOKEN} -r go-http-tunnel pre-release ${OUTPUT_DIR}/dist
+
+.PHONY: docker
+docker:
+	$(MAKE) -C docker docker
