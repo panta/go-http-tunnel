@@ -1,4 +1,4 @@
-GO = go
+GO ?= go
 export GO111MODULE=on
 export GOFLAGS= -mod=vendor
 
@@ -68,10 +68,10 @@ get-tools:
 	@$(GO) get -u github.com/tcnksm/ghr
 	@$(GO) get -u honnef.co/go/tools/cmd/megacheck
 
-OUTPUT_DIR = build
-OS = "darwin freebsd linux windows"
-ARCH = "386 amd64 arm"
-OSARCH = "!darwin/386 !darwin/arm !windows/arm"
+OUTPUT_DIR ?= build
+OS ?= "darwin freebsd linux windows"
+ARCH ?= "386 amd64 arm"
+OSARCH ?= "!darwin/386 !darwin/arm !windows/arm"
 GIT_COMMIT = $(shell git describe --always)
 
 .PHONY: release
