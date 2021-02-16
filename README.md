@@ -1,4 +1,6 @@
-# Tunnel [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg)](http://godoc.org/github.com/mmatczuk/go-http-tunnel) [![Go Report Card](https://goreportcard.com/badge/github.com/mmatczuk/go-http-tunnel)](https://goreportcard.com/report/github.com/mmatczuk/go-http-tunnel) [![Build Status](http://img.shields.io/travis/mmatczuk/go-http-tunnel.svg)](https://travis-ci.org/mmatczuk/go-http-tunnel.svg?branch=master) [![Github All Releases](https://img.shields.io/github/downloads/mmatczuk/go-http-tunnel/total.svg)](https://github.com/mmatczuk/go-http-tunnel/releases)
+# Tunnel [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg)](http://godoc.org/github.com/panta/go-http-tunnel) [![Go Report Card](https://goreportcard.com/badge/github.com/panta/go-http-tunnel)](https://goreportcard.com/report/github.com/panta/go-http-tunnel) [![Build Status](http://img.shields.io/travis/panta/go-http-tunnel.svg)](https://travis-ci.org/panta/go-http-tunnel.svg?branch=master) [![Github All Releases](https://img.shields.io/github/downloads/panta/go-http-tunnel/total.svg)](https://github.com/panta/go-http-tunnel/releases)
+
+This is a fork of [mmatczuk/go-http-tunnel](https://github.com/mmatczuk/go-http-tunnel).
 
 Tunnel enables you to **share your localhost when you don't have a public IP**.
 
@@ -28,10 +30,10 @@ Common use cases:
 Build the latest version.
 
 ```bash
-$ go get -u github.com/mmatczuk/go-http-tunnel/cmd/...
+$ go get -u github.com/panta/go-http-tunnel/cmd/...
 ```
 
-Alternatively [download the latest release](https://github.com/mmatczuk/go-http-tunnel/releases/latest).
+Alternatively [download the latest release](https://github.com/panta/go-http-tunnel/releases/latest).
 
 ## Running
 
@@ -130,6 +132,12 @@ A GitHub star is always appreciated!
 
 ## License
 
+Modifications to the [original project](https://github.com/mmatczuk/go-http-tunnel) are:
+
+Copyright (C) 2021 Marco Pantaleoni. All rights reserved.
+
+The [original project](https://github.com/mmatczuk/go-http-tunnel) is:
+
 Copyright (C) 2017 Michał Matczuk
 
-This project is distributed under the BSD-3 license. See the [LICENSE](https://github.com/mmatczuk/go-http-tunnel/blob/master/LICENSE) file for details.
+This project is distributed under the BSD-3 license. See the [LICENSE](https://github.com/panta/go-http-tunnel/blob/master/LICENSE) file for details.
