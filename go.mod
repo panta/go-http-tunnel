@@ -1,0 +1,13 @@
+module github.com/panta/go-http-tunnel
+
+go 1.15
+
+require (
+	github.com/calmh/luhn v2.0.0+incompatible
+	github.com/cenkalti/backoff v1.1.0
+	github.com/felixge/tcpkeepalive v0.0.0-20160804073959-5bb0b2dea91e
+	github.com/golang/mock v1.0.0
+	golang.org/x/net v0.0.0-20171123081856-c7086645de24
+	golang.org/x/text v0.1.1-0.20171102192421-88f656faf3f3
+	gopkg.in/yaml.v2 v2.0.0-20171116090243-287cf08546ab
+)
