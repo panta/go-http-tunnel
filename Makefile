@@ -1,3 +1,7 @@
+GO = go
+export GO111MODULE=on
+export GOFLAGS= -mod=vendor
+
 all: clean check test
 
 .PHONY: clean
@@ -40,7 +44,7 @@ check: .check-fmt .check-vet .check-lint .check-ineffassign .check-mega .check-m
 
 .PHONY: .check-vendor
 .check-vendor:
-	@dep ensure -no-vendor -dry-run
+	@$(GO) mod verify
 
 .PHONY: test
 test:
@@ -50,12 +54,11 @@ test:
 .PHONY: get-deps
 get-deps:
 	@echo "==> Installing dependencies..."
-	@dep ensure
+	@$(GO) mod vendor
 
 .PHONY: get-tools
 get-tools:
 	@echo "==> Installing tools..."
-	@go get -u github.com/golang/dep/cmd/dep
 	@go get -u github.com/golang/lint/golint
 	@go get -u github.com/golang/mock/gomock
 
