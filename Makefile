@@ -6,22 +6,22 @@ all: clean check test
 
 .PHONY: clean
 clean:
-	@go clean -r
+	@$(GO) clean -r
 
 .PHONY: fmt
 fmt:
-	@go fmt ./...
+	@$(GO) fmt ./...
 
 .PHONY: check
 check: .check-fmt .check-vet .check-lint .check-ineffassign .check-mega .check-misspell .check-vendor
 
 .PHONY: .check-fmt
 .check-fmt:
-	@go fmt ./... | tee /dev/stderr | ifne false
+	@$(GO) fmt ./... | tee /dev/stderr | ifne false
 
 .PHONY: .check-vet
 .check-vet:
-	@go vet ./...
+	@$(GO) vet ./...
 
 .PHONY: .check-lint
 .check-lint:
@@ -49,7 +49,7 @@ check: .check-fmt .check-vet .check-lint .check-ineffassign .check-mega .check-m
 .PHONY: test
 test:
 	@echo "==> Running tests (race)..."
-	@go test -cover -race ./...
+	@$(GO) test -cover -race ./...
 
 .PHONY: get-deps
 get-deps:
@@ -59,14 +59,14 @@ get-deps:
 .PHONY: get-tools
 get-tools:
 	@echo "==> Installing tools..."
-	@go get -u github.com/golang/lint/golint
-	@go get -u github.com/golang/mock/gomock
+	@$(GO) get -u github.com/golang/lint/golint
+	@$(GO) get -u github.com/golang/mock/gomock
 
-	@go get -u github.com/client9/misspell/cmd/misspell
-	@go get -u github.com/gordonklaus/ineffassign
-	@go get -u github.com/mitchellh/gox
-	@go get -u github.com/tcnksm/ghr
-	@go get -u honnef.co/go/tools/cmd/megacheck
+	@$(GO) get -u github.com/client9/misspell/cmd/misspell
+	@$(GO) get -u github.com/gordonklaus/ineffassign
+	@$(GO) get -u github.com/mitchellh/gox
+	@$(GO) get -u github.com/tcnksm/ghr
+	@$(GO) get -u honnef.co/go/tools/cmd/megacheck
 
 OUTPUT_DIR = build
 OS = "darwin freebsd linux windows"
